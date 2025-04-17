@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ePortfolio - Davis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>ePortfolio</strong> by Braeden Davis</a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>About Me</h1>
+									</header>
+
+									<span class="image main"><img src="images/group.jpg" alt="" /></span>
+
+									<p>Hey! I’m Braeden Davis, an Information Technology student at Trevecca Nazarene University with a concentration in Software Engineering. I enjoy combining logic and creativity to build tools that are both functional and user-friendly. Whether it's designing a better user experience or connecting a front-end interface to a database, I love figuring out how all the pieces fit.</p>
+									<p>My background includes experience with programming languages such as Java, Python, and C++, front-end development with HTML and CSS, and database work using SQL. I've also worked on UI/UX projects in Figma and built applications using IDEs like Qt Creator, Eclipse, and Visual Studio Code. No matter the project, I always aim to create solutions that are clean, intuitive, and effective.</p>
+									<p>Outside of coding, I’m a huge movie fan — which, surprisingly, helped inspire one of my favorite design projects. I'm always looking to expand my skill set, take on new challenges, and keep learning as I go.</p>
+
+									<hr class="major" />
+
+									<h2>Skills & Tools</h2>
+									<div class="tab-container">
+									<div class="tabs">
+										<a href="javascript:void(0)" class="button active" onclick="showTab('technical')">Technical</a>
+										<a href="javascript:void(0)" class="button" onclick="showTab('soft')">Soft Skills</a>
+									</div>
+
+									<div class="tab-content" id="technical">
+										<span>Java</span><span>Python</span><span>C++</span><span>SQL</span>
+										<span>HTML</span><span>CSS</span><span>Figma</span><span>Qt Creator</span>
+										<span>VS Code</span><span>Eclipse</span><span>MySQL</span><span>Wireframing</span>
+										<span>Web Development</span><span>Web Design</span>
+									</div>
+
+									<div class="tab-content hidden" id="soft">
+										<span>Leadership</span><span>Employee Training</span><span>Communication</span>
+										<span>Adaptability</span><span>Creativity</span><span>Problem Solving</span>
+										<span>Attention to Detail</span><span>Teamwork</span><span>Cross-departmental Communication</span>
+										<span>Inventory Management</span><span>Team Management</span>
+									</div>
+									</div>
+
+									<style>
+										.tab-container {
+										margin-top: 1.5rem;
+										}
+										
+										.tabs {
+										display: flex;
+										gap: 1rem;
+										margin-bottom: 1.5rem;
+										}
+										
+										/* Default button styling comes from main.css via .button */
+										
+										/* Active tab underline */
+										.tabs .button.active {
+										text-decoration: underline;
+										text-decoration-thickness: 2px;
+										text-underline-offset: 4px;
+										}
+										
+										.tab-content {
+										display: flex;
+										flex-wrap: wrap;
+										gap: 0.6rem;
+										}
+										
+										.tab-content span {
+										background-color: #f3f3f3;
+										padding: 0.6rem 1.1rem;
+										border-radius: 20px;
+										font-size: 0.95rem;
+										white-space: nowrap;
+										}
+										
+										.hidden {
+										display: none;
+										}
+										</style>
+
+										<script>
+										function showTab(tabId) {
+										document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+										document.querySelectorAll('.tabs .button').forEach(btn => btn.classList.remove('active'));
+										document.getElementById(tabId).classList.remove('hidden');
+										event.target.classList.add('active');
+										}
+										</script>
+									
+									<hr class="major" />
+
+									<h2>Currently Working On</h2>
+									<div class="timeline">
+									<!-- Timeline Item 1 -->
+									<div class="timeline-item">
+										<div class="timeline-date">Now</div>
+										<div class="timeline-content">
+										<h3>Advanced Data Structures & Algorithms Assignment</h3>
+										<p>
+											With my CSV files complete, I'm shifting focus to constructing an undirected graph from global airport data. Next, I'll implement algorithms to calculate distances and analyze route efficiency in Parts 2 and 3.
+										</p>
+										</div>
+									</div>
+									<!-- Timeline Item 2 -->
+									<div class="timeline-item">
+										<div class="timeline-date">Now</div>
+										<div class="timeline-content">
+										<h3>Freelance ePortfolio for Upcoming Voice Actor</h3>
+										<p>
+											Working on a custom ePortfolio project that highlights an upcoming voice actor’s talents. I’m focusing on integrating audio content in a way that’s both professional and engaging.
+										</p>
+										</div>
+									</div>
+									<!-- Timeline Item 3 -->
+									<div class="timeline-item">
+										<div class="timeline-date">Coming Soon</div>
+										<div class="timeline-content">
+										<h3>Finalizing Summer Internship</h3>
+										<p>
+											Wrapping up the final details of my upcoming summer internship, gearing up for a hands-on industry experience.
+										</p>
+										</div>
+									</div>
+									</div>
+
+									<style>
+									.timeline {
+										border-left: 2px solid #6ec3ff;
+										margin: 2rem 0;
+										padding-left: 2rem;
+									}
+
+									.timeline-item {
+										margin-bottom: 2rem;
+										position: relative;
+									}
+
+									/* Adjusted bullet positioning so it doesn't obstruct text */
+									.timeline-item::before {
+										content: "";
+										position: absolute;
+										left: -1.4rem; /* Moves bullet further left */
+										top: 0.1rem;   /* Slight adjustment vertical alignment */
+										width: 1rem;
+										height: 1rem;
+										background-color: #6ec3ff;
+										border-radius: 50%;
+									}
+
+									.timeline-date {
+										font-weight: bold;
+										color: #6ec3ff;
+										margin-bottom: 0.3rem;
+										font-size: 0.9rem;
+										position: relative;
+										top: -0.15rem; /* <== This is the only change: moves text slightly up */
+									}
+
+									.timeline-content h3 {
+										margin: 0.2rem 0;
+										font-size: 1.1rem;
+									}
+
+									.timeline-content p {
+										margin: 0.5rem 0 0;
+										line-height: 1.5;
+									}
+									</style>
+
+									<hr class="major" />
+
+									<h2>What’s Next</h2>
+									<p class="whats-next-intro">
+									With graduation on the horizon, I'm already planning my next moves — from certifications to career steps that align with my passion for development and problem-solving.
+									</p>
+
+									<div class="whats-next-grid">
+									<!-- Card 1 -->
+									<div class="whats-next-card">
+										<h3>📜 Exploring Certifications</h3>
+										<p>
+										Considering certifications in areas like backend development, C++, or popular frameworks to boost my technical toolkit and job readiness.
+										</p>
+									</div>
+
+									<!-- Card 2 -->
+									<div class="whats-next-card">
+										<h3>🎓 Graduating December 2025</h3>
+										<p>
+										Finishing up my Bachelor's in Information Technology. I'm excited to transition from student to professional and apply what I've learned in real-world projects.
+										</p>
+									</div>
+
+									<!-- Card 3 -->
+									<div class="whats-next-card">
+										<h3>💼 Full-Time Tech Role</h3>
+										<p>
+										Looking to start a full-time position in the tech industry — ideally in a development or IT-related role that challenges and grows my skillset.
+										</p>
+									</div>
+									</div>
+
+									<style>
+									.whats-next-grid {
+										display: grid;
+										grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+										gap: 1.5rem;
+										margin-top: 1.5rem;
+									}
+									
+									.whats-next-card {
+										background-color: #f9f9f9;
+										border-left: 4px solid #6ec3ff;
+										padding: 1.2rem 1rem;
+										border-radius: 0.5rem;
+										box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+										transition: transform 0.2s ease;
+									}
+									
+									.whats-next-card:hover {
+										transform: translateY(-4px);
+									}
+									
+									.whats-next-card h3 {
+										margin-top: 0;
+										font-size: 1.05rem;
+										margin-bottom: 0.5rem;
+										color: #333;
+									}
+									</style>
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">About Me</a></li>
+										<li><a href="elements.html">Projects</a></li>
+										<li><a href="resume.html">Resume</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Featured Content</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+										<!-- Blog Post Article -->
+										<a href="https://blog.trevecca.edu/thehill/trevecca-student-wins-gold-at-addy-awards-for-mobile-app-design" class="image" target="_blank" rel="noopener noreferrer">
+											<img src="images/thumbnail1.webp" alt="Blog Post Image" />
+										</a>
+										<p>
+											<a href="https://blog.trevecca.edu/thehill/trevecca-student-wins-gold-at-addy-awards-for-mobile-app-design" target="_blank" rel="noopener noreferrer">
+											Read my story
+											</a>
+											– From class project to award-winning app design.
+										</p>
+										</article>
+										<article>
+											<a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" class="image" target="_blank" rel="noopener noreferrer">
+											  <img src="images/thumbnail2.png" alt="LinkedIn Profile" />
+											</a>
+											<p>
+											  <a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" target="_blank" rel="noopener noreferrer">View my LinkedIn</a> – Explore my full professional profile, experience, and endorsements.
+											</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>I’m always open to new opportunities. Feel free to reach out!</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">braedendavis02@icloud.com</a></li>
+										<li class="icon solid fa-phone">(828) 446-2089</li>
+										<li class="icon solid fa-home">333 Murfreesboro Pike<br />
+										Nashville, TN, 37210</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Braeden Davis. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
