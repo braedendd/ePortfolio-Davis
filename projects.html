@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>ePortfolio - Davis</title>
+		<title>ePortfolio - Projects | Davis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,8 +25,7 @@
 									<a href="index.html" class="logo"><strong>ePortfolio</strong> by Braeden Davis</a>
 									<ul class="icons">
 										<li><a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/braedendd" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									</ul>
 								</header>
 
@@ -38,11 +37,85 @@
 
 									<!-- Content -->
 									<h2 id="huffman">Huffman Coding Compression Tool</h2>
+										<p>Developed a Huffman Coding Compression Tool in C++ that compresses and decompresses text files using a 7-bit ASCII table, ensuring lossless conversion between .txt and .huf formats.</p>
+
+										<!-- Side-by-Side Screenshot Layout -->
+										<div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
+
+											<!-- Screenshot 1 -->
+											<div style="flex: 1; min-width: 300px; max-width: 480px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+												<img src="images/huffmancoding_ss.png" alt="Huffman Coding GUI View 1" style="width: 100%; height: auto; display: block;">
+											</div>
+
+											<!-- Screenshot 2 -->
+											<div style="flex: 1; min-width: 300px; max-width: 480px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden;">
+												<img src="images/huffmancoding_ss2.png" alt="Huffman Coding GUI View 2" style="width: 100%; height: auto; display: block;">
+											</div>
+
+										</div>
+
+									<!-- Compression Chart for Huffman Coding -->
+									<h3 style="margin-top: 2.5em;">Compression Efficiency Chart</h3>
+										<p>This chart shows the compression efficiency of different datasets processed using the Huffman Coding Compression Tool.</p>
+
+										<canvas id="compressionChart" width="400" height="200"></canvas>
+										<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+										<script>
+											var ctx = document.getElementById('compressionChart').getContext('2d');
+											var compressionChart = new Chart(ctx, {
+												type: 'bar',
+												data: {
+													labels: ['Dataset 1', 'Dataset 2', 'Dataset 3', 'Dataset 4'], // Reversed Dataset order
+													datasets: [{
+														label: 'Original Size (KB)',
+														data: [16, 80, 239, 1191], // Reversed Original Sizes
+														backgroundColor: 'rgba(0, 123, 255, 0.5)',
+														borderColor: 'rgba(0, 123, 255, 1)',
+														borderWidth: 1
+													},
+													{
+														label: 'Compressed Size (KB)',
+														data: [11, 49, 144, 718], // Reversed Compressed Sizes
+														backgroundColor: 'rgba(40, 167, 69, 0.5)',
+														borderColor: 'rgba(40, 167, 69, 1)',
+														borderWidth: 1
+													}]
+												},
+												options: {
+													responsive: true,
+													scales: {
+														y: {
+															beginAtZero: true
+														}
+													},
+													plugins: {
+														legend: {
+															position: 'top',
+														},
+														tooltip: {
+															callbacks: {
+																label: function(tooltipItem) {
+																	// Access the corresponding datasets values for Original and Compressed Sizes
+																	const originalSize = compressionChart.data.datasets[0].data[tooltipItem.dataIndex]; // Get original size
+																	const compressedSize = compressionChart.data.datasets[1].data[tooltipItem.dataIndex]; // Get compressed size
+																	
+																	// Calculate percentage
+																	const percentage = ((originalSize - compressedSize) / originalSize * 100).toFixed(2) + '%';
+																	
+																	// Return formatted label for tooltip
+																	return tooltipItem.dataset.label + ': ' + tooltipItem.raw + ' (Compression: ' + percentage + ')';
+																}
+															}
+														}
+													}
+												}
+											});
+										</script>
 
 									<hr class="major" />
 
 									<h2 id="sqlbrowser">SQL Browser</h2>
-										<p>This is a preview of the Carmike Cinemas mobile app. You can interact with the embedded prototype below or click the button to open it fullscreen in a new tab.</p>
+										<p>This Qt/C++ SQL Browser connects to a local MySQL instance and logs every executed query, providing a real‑time GUI for browsing, editing, and auditing database operations.</p>
 
 										<!-- Side-by-Side Screenshot and Video Preview -->
 										<div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; align-items: flex-start; margin-bottom: 2em;">
@@ -110,9 +183,9 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">About Me</a></li>
-										<li><a href="elements.html">Projects</a></li>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="projects.html">Projects</a></li>
 										<li><a href="resume.html">Resume</a></li>
 									</ul>
 								</nav>
@@ -142,10 +215,6 @@
 											<p>
 											  <a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" target="_blank" rel="noopener noreferrer">View my LinkedIn</a> – Explore my full professional profile, experience, and endorsements.
 											</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 									</div>
 									<ul class="actions">

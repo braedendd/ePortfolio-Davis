@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>ePortfolio - Davis</title>
+		<title>ePortfolio - About Me | Davis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,8 +25,7 @@
 									<a href="index.html" class="logo"><strong>ePortfolio</strong> by Braeden Davis</a>
 									<ul class="icons">
 										<li><a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="https://github.com/braedendd" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									</ul>
 								</header>
 
@@ -47,8 +46,8 @@
 									<h2>Skills & Tools</h2>
 									<div class="tab-container">
 									<div class="tabs">
-										<a href="javascript:void(0)" class="button active" onclick="showTab('technical')">Technical</a>
-										<a href="javascript:void(0)" class="button" onclick="showTab('soft')">Soft Skills</a>
+										<a href="javascript:void(0)" class="button primary" onclick="showTab('technical', this)">Technical</a>
+										<a href="javascript:void(0)" class="button" onclick="showTab('soft', this)">Soft Skills</a>
 									</div>
 
 									<div class="tab-content" id="technical">
@@ -61,59 +60,55 @@
 									<div class="tab-content hidden" id="soft">
 										<span>Leadership</span><span>Employee Training</span><span>Communication</span>
 										<span>Adaptability</span><span>Creativity</span><span>Problem Solving</span>
-										<span>Attention to Detail</span><span>Teamwork</span><span>Cross-departmental Communication</span>
+										<span>Attention to Detail</span><span>Teamwork</span><span>Cross‑departmental Communication</span>
 										<span>Inventory Management</span><span>Team Management</span>
 									</div>
 									</div>
 
 									<style>
-										.tab-container {
+									.tab-container {
 										margin-top: 1.5rem;
-										}
-										
-										.tabs {
+									}
+									.tabs {
 										display: flex;
 										gap: 1rem;
 										margin-bottom: 1.5rem;
-										}
-										
-										/* Default button styling comes from main.css via .button */
-										
-										/* Active tab underline */
-										.tabs .button.active {
-										text-decoration: underline;
-										text-decoration-thickness: 2px;
-										text-underline-offset: 4px;
-										}
-										
-										.tab-content {
+										justify-content: flex-start; /* or center, whichever you prefer */
+									}
+
+									/* Remove any custom underline rules—you want to rely on .button.primary only */
+
+									.tab-content {
 										display: flex;
 										flex-wrap: wrap;
 										gap: 0.6rem;
-										}
-										
-										.tab-content span {
+									}
+									.tab-content span {
 										background-color: #f3f3f3;
 										padding: 0.6rem 1.1rem;
 										border-radius: 20px;
 										font-size: 0.95rem;
 										white-space: nowrap;
-										}
-										
-										.hidden {
+									}
+									.hidden {
 										display: none;
-										}
-										</style>
+									}
+									</style>
 
-										<script>
-										function showTab(tabId) {
+									<script>
+									function showTab(tabId, btn) {
+										// hide all tab contents
 										document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-										document.querySelectorAll('.tabs .button').forEach(btn => btn.classList.remove('active'));
+										// show the one we want
 										document.getElementById(tabId).classList.remove('hidden');
-										event.target.classList.add('active');
-										}
-										</script>
-									
+
+										// remove primary from all buttons
+										document.querySelectorAll('.tabs .button').forEach(b => b.classList.remove('primary'));
+										// add primary to the clicked one
+										btn.classList.add('primary');
+									}
+									</script>
+
 									<hr class="major" />
 
 									<h2>Currently Working On</h2>
@@ -278,9 +273,9 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">About Me</a></li>
-										<li><a href="elements.html">Projects</a></li>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="aboutme.html">About Me</a></li>
+										<li><a href="projects.html">Projects</a></li>
 										<li><a href="resume.html">Resume</a></li>
 									</ul>
 								</nav>
@@ -310,10 +305,6 @@
 											<p>
 											  <a href="https://www.linkedin.com/in/braeden-davis-322b1734a/" target="_blank" rel="noopener noreferrer">View my LinkedIn</a> – Explore my full professional profile, experience, and endorsements.
 											</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
 										</article>
 									</div>
 									<ul class="actions">
